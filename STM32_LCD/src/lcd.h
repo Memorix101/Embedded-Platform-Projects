@@ -20,8 +20,6 @@ typedef enum
     LCD_COMMAND
 } LCD_ARG_t;
 
-// void LCD_SendCommand(uint8_t command);
-// void LCD_SendData(uint8_t data);
 void LCD_Send(uint8_t data, LCD_ARG_t arg);
 void LCD_Clear(void);
 void LCD_WriteString(char *str);
