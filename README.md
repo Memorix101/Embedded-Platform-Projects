@@ -6,7 +6,7 @@ Arduino/AVR may use [Microchip Studio](https://www.microchip.com/en-us/tools-res
 
 ---
 ### Microcontrollers used
-- [STM32 Nucleon F446RE](https://www.st.com/en/evaluation-tools/nucleo-f446re.html)
+- [STM32 Nucleo F446RE](https://www.st.com/en/evaluation-tools/nucleo-f446re.html)
 - [Arduino Uno R3](https://docs.arduino.cc/hardware/uno-rev3/)
 
 ---
