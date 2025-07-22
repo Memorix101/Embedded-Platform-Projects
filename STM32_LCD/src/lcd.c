@@ -33,7 +33,7 @@ void LCD_Init(void)
     LCD_Send(0x06, LCD_COMMAND); // 0000 0110 - Entry mode set: Increment cursor, no shift
 }
 
-void LCD_Send(uint8_t data, LCD_ARG_t arg)
+void LCD_Send(uint8_t data, LCD_RS_t arg)
 {
     switch (arg)
     {
@@ -107,9 +107,9 @@ void LCD_WriteChar(char c)
     HAL_Delay(1);
 }
 
-void LCD_WriteStringClear(char *str)
+void LCD_WriteStringLine(char *str, LCD_LINE_LENGTH_t lineCharacters)
 {
-    uint8_t maxLength = 16; // Assuming a 16x2 LCD
+    uint8_t maxLength = lineCharacters;
     uint8_t len = strlen(str);
 
     LCD_WriteString(str);

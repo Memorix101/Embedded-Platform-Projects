@@ -18,14 +18,22 @@ typedef enum
 {
     LCD_DATA,
     LCD_COMMAND
-} LCD_ARG_t;
+} LCD_RS_t; // RS - Register Select
 
-void LCD_Send(uint8_t data, LCD_ARG_t arg);
+typedef enum
+{
+    LCD_8 = 8,
+    LCD_16 = 16,
+    LCD_40 = 40,
+    LCD_80 = 80,
+} LCD_LINE_LENGTH_t;
+
+void LCD_Send(uint8_t data, LCD_RS_t arg);
 void LCD_Clear(void);
 void LCD_WriteString(char *str);
 void LCD_SetCursor(uint8_t row, uint8_t col);
 void LCD_GotoXY(uint8_t x, uint8_t y);
 void LCD_Home(void);
 void LCD_WriteChar(char c);
-void LCD_WriteStringClear(char *str);
+void LCD_WriteStringLine(char *str, LCD_LINE_LENGTH_t lineCharacters);
 void LCD_WriteStringAtPosition(uint8_t row, uint8_t col, char *str, uint8_t fieldWidth);

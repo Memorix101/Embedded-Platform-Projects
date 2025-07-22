@@ -49,7 +49,7 @@ int main()
     //LCD_Clear();
     sprintf(buffer, "Counter: %d", counter++);
     LCD_SetCursor(1, 1);
-    LCD_WriteStringClear(buffer);
+    LCD_WriteStringLine(buffer, LCD_16); // Clear and write string
 
     LCD_SetCursor(2, 1);
     LCD_WriteString("Line two");
