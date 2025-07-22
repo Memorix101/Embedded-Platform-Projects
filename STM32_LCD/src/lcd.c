@@ -107,12 +107,12 @@ void LCD_WriteChar(char c)
     HAL_Delay(1);
 }
 
-void LCD_WriteStringLine(char *str, LCD_LINE_LENGTH_t lineCharacters)
+void LCD_WriteLine(char *str, LCD_LINE_LENGTH_t lineCharacters)
 {
     uint8_t maxLength = lineCharacters;
     uint8_t len = strlen(str);
 
-    LCD_WriteString(str);
+    LCD_Write(str);
 
     for (uint8_t i = len; i < maxLength; i++)
     {
@@ -120,13 +120,13 @@ void LCD_WriteStringLine(char *str, LCD_LINE_LENGTH_t lineCharacters)
     }
 }
 
-void LCD_WriteStringAtPosition(uint8_t row, uint8_t col, char *str, uint8_t fieldWidth)
+void LCD_WriteAtPosition(uint8_t row, uint8_t col, char *str, uint8_t fieldWidth)
 {
     LCD_SetCursor(row, col);
 
     uint8_t len = strlen(str);
 
-    LCD_WriteString(str);
+    LCD_Write(str);
 
     for (uint8_t i = len; i < fieldWidth; i++)
     {
@@ -140,7 +140,7 @@ void LCD_Clear(void)
     HAL_Delay(2);
 }
 
-void LCD_WriteString(char *str)
+void LCD_Write(char *str)
 {
     while (*str)
     {

@@ -30,10 +30,10 @@ typedef enum
 
 void LCD_Send(uint8_t data, LCD_RS_t arg);
 void LCD_Clear(void);
-void LCD_WriteString(char *str);
+void LCD_Write(char *str);
 void LCD_SetCursor(uint8_t row, uint8_t col);
 void LCD_GotoXY(uint8_t x, uint8_t y);
 void LCD_Home(void);
 void LCD_WriteChar(char c);
-void LCD_WriteStringLine(char *str, LCD_LINE_LENGTH_t lineCharacters);
-void LCD_WriteStringAtPosition(uint8_t row, uint8_t col, char *str, uint8_t fieldWidth);
+void LCD_WriteLine(char *str, LCD_LINE_LENGTH_t lineCharacters);
+void LCD_WriteAtPosition(uint8_t row, uint8_t col, char *str, uint8_t fieldWidth);

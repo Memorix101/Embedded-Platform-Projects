@@ -37,11 +37,11 @@ int main()
   LCD_Init();
   LCD_Clear();
 
-  LCD_WriteString("123 Hello World!");
+  LCD_Write("123 Hello World!");
   HAL_Delay(300);
 
   LCD_SetCursor(2, 1);
-  LCD_WriteString("Line two");
+  LCD_Write("Line two");
   HAL_Delay(300);
   LCD_Clear();
   while (1)
@@ -49,10 +49,10 @@ int main()
     //LCD_Clear();
     sprintf(buffer, "Counter: %d", counter++);
     LCD_SetCursor(1, 1);
-    LCD_WriteStringLine(buffer, LCD_16); // Clear and write string
+    LCD_WriteLine(buffer, LCD_16); // Clear and write string
 
     LCD_SetCursor(2, 1);
-    LCD_WriteString("Line two");
+    LCD_Write("Line two");
 
    // HAL_Delay(100); // Update every second
   }
