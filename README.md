@@ -1,8 +1,8 @@
 ## Embedded Platform Projects
 
-This is a repo for some just for fun embedded projects
-Most will use [PlatformIO](https://platformio.org) as SDK so we can keep it multiplaform 🪟🐧🍏
-Arduino/AVR may use [Microchip Studio](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio) which is Windows only 😢
+This is a repo for some just for fun embedded projects</br>
+Most will use [PlatformIO](https://platformio.org) as SDK so we can keep it multiplaform 🪟🐧🍏</br>
+Arduino/AVR may use [Microchip Studio](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio) which is Windows only 😢</br>
 
 ---
 ### Microcontrollers used
